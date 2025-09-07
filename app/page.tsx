@@ -124,7 +124,7 @@ export default function PortfolioPage() {
                             <div className="md:col-span-1">
                                 <h2 className="text-3xl font-bold text-white mb-4">About Me</h2>
                                 <div className="flex items-center gap-4">
-                                    <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="text-stone-400 hover:text-emerald-400 transition-colors"><GithubIcon /></a>
+                                    <a href="https://github.com/SatoshiBall101" target="_blank" rel="noopener noreferrer" className="text-stone-400 hover:text-emerald-400 transition-colors"><GithubIcon /></a>
                                     <a href="https://www.linkedin.com/in/amman-chuhan/" target="_blank" rel="noopener noreferrer" className="text-stone-400 hover:text-emerald-400 transition-colors"><LinkedinIcon /></a>
                                 </div>
                             </div>
