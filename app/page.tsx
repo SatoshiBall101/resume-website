@@ -1,13 +1,15 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, useInView, useAnimation } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Image from 'next/image';
 
 // --- SVG ICONS (No Changes Here) ---
 
 const ArrowRightIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <line x1="5" y1="2" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+    <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
   </svg>
 );
 
@@ -17,10 +19,6 @@ const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-);
-
-const ExternalLinkIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
 );
 
 
@@ -43,7 +41,7 @@ const Header = () => {
                     <a href="#about" className="text-stone-300 hover:text-white transition-colors">About</a>
                     <a href="#experience" className="text-stone-300 hover:text-white transition-colors">Experience</a>
                     <a href="#projects" className="text-stone-300 hover:text-white transition-colors">Projects</a>
-                    <a href="/contact" className="bg-emerald-500 text-white font-semibold py-2 px-5 rounded-full hover:bg-emerald-600 transition-colors">Contact</a>
+                    <Link href="/contact" className="bg-emerald-500 text-white font-semibold py-2 px-5 rounded-full hover:bg-emerald-600 transition-colors">Contact</Link>
                 </nav>
             </div>
         </header>
@@ -66,10 +64,12 @@ export default function PortfolioPage() {
                     transition={{ duration: 0.8 }}
                 >
                     <div className="absolute inset-0 z-0">
-                        <img 
+                        <Image 
                             src="/headshot.png" 
-                            alt="Abstract background" 
-                            className="w-full h-full object-cover"
+                            alt="Amman Chuhan headshot" 
+                            fill
+                            style={{ objectFit: 'cover' }}
+                            priority
                         />
                     </div>
 
@@ -81,7 +81,7 @@ export default function PortfolioPage() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
                             >
-                                Hi, I'm Amman Chuhan.
+                                Hi, I&apos;m Amman Chuhan.
                                 <br />
                                 <span className="text-emerald-400 font-serif italic font-light text-2xl md:text-3xl">
                                     <span className="font-bold">Analyst</span>, <span className="font-bold">Technologist</span>, & <span className="font-bold">Creative Problem Solver</span>.
@@ -129,7 +129,7 @@ export default function PortfolioPage() {
                             </div>
                             <div className="md:col-span-2 text-stone-300 space-y-6 text-lg">
                                 <p>
-                                    My journey began with a computer science degree from USC, where I built a strong foundation in software engineering and problem-solving. While I love building technology, I'm most passionate about understanding the "why" behind it—how data can inform strategy and how well-designed products can solve real-world business challenges.
+                                    My journey began with a computer science degree from USC, where I built a strong foundation in software engineering and problem-solving. While I love building technology, I&apos;m most passionate about understanding the &quot;why&quot; behind it—how data can inform strategy and how well-designed products can solve real-world business challenges.
                                 </p>
                                 <p>
                                     At SHOOK Research, I look forward to applying my analytical skills to not only crunch numbers but also to deconstruct and improve the very processes we use. My goal is to leverage my unique blend of technical and analytical skills to help guide products from idea to impact.
@@ -165,7 +165,7 @@ export default function PortfolioPage() {
                         <div className="max-w-3xl mx-auto space-y-12">
                             {/* Experience Item */}
                             <div className="flex items-start gap-6">
-                                <img src="/shookresearch.jpeg"  alt="SHOOK Research Logo" className="w-12 h-12 rounded-full flex-shrink-0" />
+                                <Image src="/shookresearch.jpeg"  alt="SHOOK Research Logo" width={48} height={48} className="w-12 h-12 rounded-full flex-shrink-0" />
                                 <div>
                                     <h3 className="text-xl font-semibold text-white">Research & Data Analyst</h3>
                                     <p className="text-emerald-400 mb-1">SHOOK Research</p>
@@ -175,26 +175,26 @@ export default function PortfolioPage() {
                             </div>
                              {/* Experience Item */}
                              <div className="flex items-start gap-6">
-                             <img src="/trojanvision.png" alt="Trojan Vision Logo" className="w-12 h-12 object-contain rounded-full flex-shrink-0" />                                <div>
+                             <Image src="/trojanvision.png" alt="Trojan Vision Logo" width={48} height={48} className="w-12 h-12 object-contain rounded-full flex-shrink-0" />                                <div>
                                     <h3 className="text-xl font-semibold text-white">Head Project Manager</h3>
                                     <p className="text-emerald-400 mb-1">Trojan Vision Television</p>
                                     <p className="text-stone-400 text-sm mb-2">Aug 2022 - May 2025</p>
-                                    <p className="text-stone-300">Led and coordinated a student production team for Trojan Vision's gameshow section, managing executive producers, story teams, and technical crews to ensure smooth live productions.</p>
+                                    <p className="text-stone-300">Led and coordinated a student production team for Trojan Vision&apos;s gameshow section, managing executive producers, story teams, and technical crews to ensure smooth live productions.</p>
                                 </div>
                             </div>
                              {/* Experience Item */}
                              <div className="flex items-start gap-6">
-                                <img src="/coinpresso.png" alt="Coinpresso Logo" className="w-12 h-12 rounded-full flex-shrink-0" />
+                                <Image src="/coinpresso.png" alt="Coinpresso Logo" width={48} height={48} className="w-12 h-12 rounded-full flex-shrink-0" />
                                 <div>
                                     <h3 className="text-xl font-semibold text-white">Software Engineer Intern</h3>
                                     <p className="text-emerald-400 mb-1">Coinpresso</p>
                                     <p className="text-stone-400 text-sm mb-2">May 2023 - Aug 2023</p>
-                                    <p className="text-stone-300">Developed backend logic using Java with Springboot and Microservices Architechture. Used React, HTML and CSS for front-end development. Engineered a serverless AWS pipeline for a client's KYC portal using S3, Lambda, and Rekognition to automate facial analysis and validation, enhancing data processing efficiency.</p>
+                                    <p className="text-stone-300">Developed backend logic using Java with Springboot and Microservices Architechture. Used React, HTML and CSS for front-end development. Engineered a serverless AWS pipeline for a client&apos;s KYC portal using S3, Lambda, and Rekognition to automate facial analysis and validation, enhancing data processing efficiency.</p>
                                 </div>
                             </div>
                             {/* Experience Item */}
                             <div className="flex items-start gap-6">
-                                <img src="/marketcast.jpeg" alt="MarketCast Logo" className="w-12 h-12 rounded-full flex-shrink-0" />
+                                <Image src="/marketcast.jpeg" alt="MarketCast Logo" width={48} height={48} className="w-12 h-12 rounded-full flex-shrink-0" />
                                 <div>
                                     <h3 className="text-xl font-semibold text-white">Content Insights Data Intern</h3>
                                     <p className="text-emerald-400 mb-1">MarketCast</p>
@@ -204,7 +204,7 @@ export default function PortfolioPage() {
                             </div>
                             {/* Education Item */}
                             <div className="flex items-start gap-6">
-                                <img src="/usclogo.png" alt="USC Logo" className="w-12 h-12 rounded-full flex-shrink-0" />
+                                <Image src="/usclogo.png" alt="USC Logo" width={48} height={48} className="w-12 h-12 rounded-full flex-shrink-0" />
                                 <div>
                                     <h3 className="text-xl font-semibold text-white">Computer Science (B.S.)</h3>
                                     <p className="text-emerald-400 mb-1">University of Southern California</p>
@@ -261,7 +261,7 @@ export default function PortfolioPage() {
                                 transition={{ duration: 0.5, delay: 0.2 }}
                             >
                                 <h3 className="text-xl font-semibold text-white mb-2">Entertainment Data Storytelling</h3>
-                                <p className="text-stone-300 mb-4 flex-grow">At MarketCast, I transformed complex audience data into compelling narratives. By creating data visualizations and presentations for major entertainment clients, I translated raw numbers into actionable insights, helping stakeholders understand the 'why' behind viewership trends.</p>
+                                <p className="text-stone-300 mb-4 flex-grow">At MarketCast, I transformed complex audience data into compelling narratives. By creating data visualizations and presentations for major entertainment clients, I translated raw numbers into actionable insights, helping stakeholders understand the &apos;why&apos; behind viewership trends.</p>
                                 <div className="flex items-center text-emerald-400 font-medium mt-auto pt-4">
                                 </div>
                             </motion.div>
@@ -274,7 +274,7 @@ export default function PortfolioPage() {
                                 transition={{ duration: 0.5, delay: 0.3 }}
                             >
                                 <h3 className="text-xl font-semibold text-white mb-2">Cube Runner</h3>
-                                <h4 className="text-l font text-gray mb-2">visionOS Spatial Computing App</h4>
+                                <h4 className="text-l font text-gray-400 mb-2">visionOS Spatial Computing App</h4>
                                 <p className="text-stone-300 mb-4 flex-grow">Developed an immersive rubiks solver game for visionOS. This project involved using SwiftUI, RealityKit, ARKit for hand gesture recognition, and a deep understanding of human-computer interaction in a 3D space among other things.</p>
                                 <div className="flex items-center text-emerald-400 font-medium mt-auto pt-4">
                                 </div>
@@ -288,7 +288,7 @@ export default function PortfolioPage() {
                                 transition={{ duration: 0.5, delay: 0.4 }}
                             >
                                 <h3 className="text-xl font-semibold text-white mb-2">Calendar Pro</h3>
-                                <h4 className="text-l font text-gray mb-2">iPadOS Productivity App</h4>
+                                <h4 className="text-l font text-gray-400 mb-2">iPadOS Productivity App</h4>
 
                                 <p className="text-stone-300 mb-4 flex-grow">Designed and built a native iPad calendar application with deep PencilKit integration. Unlike other offerings, this app offered a pencil centric apporach to recording tasks in a calendar app. I used a MVVM architecture with component-based architecture.</p>
                                 <div className="flex items-center text-emerald-400 font-medium mt-auto pt-4">
@@ -303,7 +303,7 @@ export default function PortfolioPage() {
                                 transition={{ duration: 0.5, delay: 0.5 }}
                             >
                                 <h3 className="text-xl font-semibold text-white mb-2">C++ Game Development</h3>
-                                <p className="text-stone-300 mb-4 flex-grow">Using C++ and the SDL2 library, I developed a diverse portfolio of fully playable classic game prototypes. Created versions of 3D experiences like "Star Fox," "Mario Kart," and "Portal," as well as 2D classics such as "The Legend of Zelda," "Super Mario Bros," and "Pac-Man." A key component of this work was managing a custom-built 2D/3D forward rendering engine, which utilized C++ and the OpenGL graphics API for all graphics and asset display.</p>
+                                <p className="text-stone-300 mb-4 flex-grow">Using C++ and the SDL2 library, I developed a diverse portfolio of fully playable classic game prototypes. Created versions of 3D experiences like &quot;Star Fox,&quot; &quot;Mario Kart,&quot; and &quot;Portal,&quot; as well as 2D classics such as &quot;The Legend of Zelda,&quot; &quot;Super Mario Bros,&quot; and &quot;Pac-Man.&quot; A key component of this work was managing a custom-built 2D/3D forward rendering engine, which utilized C++ and the OpenGL graphics API for all graphics and asset display.</p>
                                 <div className="flex items-center text-emerald-400 font-medium mt-auto pt-4">
                                 </div>
                             </motion.div>
@@ -319,13 +319,13 @@ export default function PortfolioPage() {
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-4xl font-bold text-white mb-4">Let's Connect</h2>
+                        <h2 className="text-4xl font-bold text-white mb-4">Let&apos;s Connect</h2>
                         <p className="text-lg text-stone-300 max-w-2xl mx-auto mb-8">
-                             If you'd like to chat about technology, product, or potential opportunities, please get in touch.
+                            I&apos;m passionate about building impactful products and am looking to grow into a product management role. If you&apos;d like to chat about technology, product, or potential opportunities, please get in touch.
                         </p>
-                        <a href="/contact" className="inline-block bg-emerald-500 text-white font-semibold py-3 px-8 rounded-full hover:bg-emerald-600 transition-colors text-lg">
+                        <Link href="/contact" className="inline-block bg-emerald-500 text-white font-semibold py-3 px-8 rounded-full hover:bg-emerald-600 transition-colors text-lg">
                             Get in Touch
-                        </a>
+                        </Link>
                     </motion.section>
                 </div>
             </main>
