@@ -16,7 +16,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      {/* Changed background to dark gray and text to light stone */}
       <body className={`${inter.className} bg-gray-900 text-stone-200 antialiased`}>
         {children}
       </body>

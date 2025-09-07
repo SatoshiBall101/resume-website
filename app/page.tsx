@@ -66,6 +66,7 @@ export default function PortfolioPage() {
                     <div className="absolute inset-0 z-0">
                         <Image 
                             src="/headshot.png" 
+                            quality={100}
                             alt="Amman Chuhan headshot" 
                             fill
                             style={{ objectFit: 'cover' }}
@@ -321,7 +322,7 @@ export default function PortfolioPage() {
                     >
                         <h2 className="text-4xl font-bold text-white mb-4">Let&apos;s Connect</h2>
                         <p className="text-lg text-stone-300 max-w-2xl mx-auto mb-8">
-                            I&apos;m passionate about building impactful products and am looking to grow into a product management role. If you&apos;d like to chat about technology, product, or potential opportunities, please get in touch.
+                            I&apos;m passionate about building impactful products and if you&apos;d like to chat about technology, product, or potential opportunities, please get in touch.
                         </p>
                         <Link href="/contact" className="inline-block bg-emerald-500 text-white font-semibold py-3 px-8 rounded-full hover:bg-emerald-600 transition-colors text-lg">
                             Get in Touch
