@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const ArrowLeftIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -29,10 +30,10 @@ export default function ContactPage() {
           transition={{ duration: 0.8 }}
         >
           <div className="mb-12">
-            <a href="/" className="inline-flex items-center gap-2 text-stone-300 hover:text-white transition-colors">
+            <Link href="/" className="inline-flex items-center gap-2 text-stone-300 hover:text-white transition-colors">
               <ArrowLeftIcon className="w-5 h-5" />
               Back to Home
-            </a>
+            </Link>
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Get in Touch</h1>
