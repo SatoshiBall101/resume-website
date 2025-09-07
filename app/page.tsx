@@ -53,7 +53,7 @@ export default function PortfolioPage() {
     return (
         <div>
             <Header />
-            <main>
+            <main className="bg-gray-900">
                 
                 {/* HERO SECTION */}
                 <motion.section 
