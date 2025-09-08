@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter,  Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 // Setup for the main font (Inter)
 const inter = Inter({ 
@@ -28,7 +29,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // Apply both font variables to the html tag
     <html lang="en" className={`${inter.variable} ${cormorant.variable} !scroll-smooth bg-gray-950`}>
       <body className={`font-sans text-stone-200 antialiased`}>
         {children}
