@@ -70,7 +70,7 @@ export default function PortfolioPage() {
                     <div className="container mx-auto px-6">
                         <div className="relative z-10 max-w-4xl text-left">
                             <motion.h1 
-                                className="text-3xl sm: text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+                                className="text-2xl sm: text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -84,7 +84,7 @@ export default function PortfolioPage() {
                                     />
                                 </span>
                                 <br />
-                                <span className="typewriter font-ebgaramond text-violet-400 text-s sm:text2-xl md:text-4xl">
+                                <span className="typewriter font-ebgaramond text-violet-400 text-lg sm:text2-xl md:text-4xl">
                                     Analyst, Technologist, &amp; Creative Problem Solver
                                 </span>
                             </motion.h1>
