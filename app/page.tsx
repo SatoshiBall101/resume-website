@@ -241,12 +241,24 @@ export default function PortfolioPage() {
                                 <h4 className="text-l font text-gray-400 mb-2">iPadOS Productivity App</h4>
                                 <p className="text-stone-300 mb-4 flex-grow">Designed and built a native iPad calendar application with deep PencilKit integration. Unlike other offerings, this app offered a pencil centric apporach to recording tasks in a calendar app. I used a MVVM architecture with component-based architecture.</p>
                             </motion.div>
-                            <Link href="/games" className="flex flex-col bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-violet-500 hover:-translate-y-1 transition-all group">
-                                <h3 className="text-xl font-semibold text-white mb-2">C++ Game Prototypes</h3>
-                                <p className="text-stone-300 mb-4 flex-grow">A collection of classic games built from scratch in C++ using a custom OpenGL rendering engine. These projects demonstrate a deep understanding of software architecture and low-level graphics programming.</p>
-                                <div className="flex items-center text-violet-400 font-medium group-hover:underline mt-auto pt-4">
+                            <Link href="/games" className="group">
+                                <motion.div
+                                    className="flex flex-col bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-violet-500 transition-all"
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.5 }}
+                                    transition={{ duration: 0.5, delay: 0.5 }}     // keep the stagger, this is the last card
+                                    whileHover={{ y: -4 }}                          // subtle lift on hover
+                                >
+                                    <h3 className="text-xl font-semibold text-white mb-2">C++ Game Prototypes</h3>
+                                    <p className="text-stone-300 mb-4 flex-grow">
+                                    A collection of classic games built from scratch in C++ using the <span className="font-semibold">SDL2</span> game engine. (Titles such as Mario Kart, a Portal Reimplementation, etc.)
+                                    These projects were a fun way to gain and demonstrate a deep understanding of software architecture and low-level rendering.
+                                    </p>
+                                    <div className="flex items-center text-violet-400 font-medium group-hover:underline mt-auto pt-4">
                                     Play the Collection <ArrowRightIcon className="ml-1 w-5 h-5" />
-                                </div>
+                                    </div>
+                                </motion.div>
                             </Link>
                         </div>
                     </motion.section>
