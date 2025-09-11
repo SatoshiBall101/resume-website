@@ -70,7 +70,7 @@ export default function PortfolioPage() {
                     <div className="container mx-auto px-6">
                         <div className="relative z-10 max-w-4xl text-left">
                             <motion.h1 
-                                className="text-2xl sm: text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+                                className="text-xl sm: text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
