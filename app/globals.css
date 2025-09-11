@@ -63,9 +63,9 @@ body {
 
   /* Layered radial gradients for a nice glow */
   background:
-    radial-gradient(60% 60% at 30% 30%, rgba(255, 255, 255, 0.65), transparent 60%),
+    radial-gradient(60% 60% at 30% 30%, rgba(130, 37, 224, 0.65), transparent 60%),
     radial-gradient(55% 55% at 70% 40%, rgba(87, 59, 246, 0.55), transparent 65%),
-    radial-gradient(50% 50% at 50% 70%, rgba(236, 72, 153, 0.45), transparent 60%);
+    radial-gradient(50% 50% at 50% 70%, rgba(201, 201, 201, 0.45), transparent 60%);
 
   /* Make it big enough to glow past the text bounds */
   width: 140%;
