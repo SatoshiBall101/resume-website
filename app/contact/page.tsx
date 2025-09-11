@@ -49,7 +49,7 @@ export default function ContactPage() {
                 id="subject"
                 name="subject"
                 required
-                className="block w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                className="block w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors"
                 placeholder="Let's connect!"
               />
             </div>
@@ -60,14 +60,14 @@ export default function ContactPage() {
                 name="message"
                 required
                 rows={6}
-                className="block w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                className="block w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors"
                 placeholder="Your message here..."
               ></textarea>
             </div>
             <div className="text-right">
               <motion.button 
                 type="submit"
-                className="inline-flex items-center gap-2 bg-emerald-500 text-white font-semibold py-3 px-8 rounded-full hover:bg-emerald-600 transition-all group"
+                className="inline-flex items-center gap-2 bg-violet-500 text-white font-semibold py-3 px-8 rounded-full hover:bg-violet-600 transition-all group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
