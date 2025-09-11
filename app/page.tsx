@@ -29,7 +29,7 @@ const Header = () => {
     return (
         <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-gray-950/80 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-                <Link href="/#hero" className="text-xl font-bold text-white">AC</a>
+                <Link href="/#hero" className="text-xl font-bold text-white">AC</Link>
                 <nav className="hidden md:flex items-center space-x-8">
                     <Link href="/#about" className="text-stone-300 hover:text-white transition-colors">About</Link>
                     <Link href="/#experience" className="text-stone-300 hover:text-white transition-colors">Experience</Link>
