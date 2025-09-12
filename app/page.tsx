@@ -83,7 +83,7 @@ export default function PortfolioPage() {
                     </div>
 
                     {/* INTRO TEXT */}
-                    <div className="relative z-10 max-w-4xl text-left mt-8 md:mt-0">
+                    <div className="relative z-10 max-w-4xl text-left -mt-4 sm:mt-0 md:mt-0">
                     <motion.h1
                         className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-snug sm:leading-tight relative"
                         initial={{ opacity: 0, y: 20 }}
