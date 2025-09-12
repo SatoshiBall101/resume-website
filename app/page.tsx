@@ -60,7 +60,7 @@ export default function PortfolioPage() {
                     src="/headshot-desktop.png"     // your wide composition
                     alt="Amman Chuhan headshot"
                     fill
-                    style={{ objectFit: "cover", objectPosition: "center" }}
+                    style={{ objectFit: "cover" }}
                     quality={100}
                     priority
                     />
