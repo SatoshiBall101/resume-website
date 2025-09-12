@@ -85,7 +85,7 @@ export default function PortfolioPage() {
                                 </span>
                                 <br />
                                 <span className="typewriter font-ebgaramond text-violet-400 text-lg sm:text2-xl md:text-4xl">
-                                    Analyst, Technologist, &amp; Creative Problem Solver
+                                    Analyst, Technologist, &amp; Problem Solver
                                 </span>
                             </motion.h1>
                             <motion.p 
