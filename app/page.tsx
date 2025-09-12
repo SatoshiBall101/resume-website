@@ -47,67 +47,83 @@ export default function PortfolioPage() {
         <div>
             <Header />
             <main className="bg-gray-950">
-                <motion.section 
-                    id="hero" 
-                    className="relative min-h-screen flex items-center overflow-hidden"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8 }}
+            <motion.section
+                id="hero"
+                className="relative min-h-screen flex items-center bg-gray-950 overflow-hidden"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
                 >
-                    <div className="absolute inset-0 z-0">
-                        <Image 
-                            src="/headshot.png" 
-                            alt="Amman Chuhan headshot" 
-                            fill
-                            style={{ objectFit: 'cover' }}
-                            quality={100}
-                            priority
+                {/* DESKTOP: background image with left negative space */}
+                <div className="absolute inset-0 z-0 hidden md:block">
+                    <Image
+                    src="/headshot-desktop.png"     // your wide composition
+                    alt="Amman Chuhan headshot"
+                    fill
+                    style={{ objectFit: "cover", objectPosition: "center" }}
+                    quality={100}
+                    priority
+                    />
+                </div>
+
+                <div className="container mx-auto px-6 w-full">
+                    {/* MOBILE: inline centered headshot */}
+                    <div className="md:hidden pt-16">
+                    <div className="relative w-full aspect-[4/5] max-w-sm mx-auto overflow-hidden rounded-2xl">
+                        <Image
+                        src="/headshot-mobile.png"   // centered mobile version
+                        alt="Amman Chuhan mobile headshot"
+                        fill
+                        style={{ objectFit: "cover", objectPosition: "center" }}
+                        quality={100}
+                        priority
+                        sizes="100vw"
                         />
                     </div>
-
-                    <div className="noise-left z-[5]" aria-hidden="true" />
-                    
-                    <div className="container mx-auto px-6">
-                        <div className="relative z-10 max-w-4xl text-left">
-                            <motion.h1 
-                                className="text-xl sm: text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.2 }}
-                            >
-                                 <span className="relative inline-block z-10">
-                                    Hi, I&apos;m Amman Chuhan
-                                    {/* Blob sits behind this span but above the background image */}
-                                    <span
-                                    className="animated-blob pointer-events-none absolute -inset-6 md:-inset-10 -z-10"
-                                    aria-hidden="true"
-                                    />
-                                </span>
-                                <br />
-                                <span className="typewriter font-ebgaramond text-violet-400 text-lg sm:text2-xl md:text-4xl">
-                                    Analyst, Technologist, &amp; Problem Solver
-                                </span>
-                            </motion.h1>
-                            <motion.p 
-                                className="text-m sm: text-lg md: text-lg text-stone-300 mb-10 max-w-2xl"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.4 }}
-                            >
-                                I bridge the gap between data-driven insights and technical product solutions. With a foundation in computer science and a focus on analytical strategy, I thrive on optimizing processes and building tools that create business value.
-                            </motion.p>
-                            <motion.a 
-                                href="#projects" 
-                                className="inline-flex items-center gap-2 bg-violet-500 text-white font-semibold py-3 px-8 rounded-full hover:bg-violet-600 transition-all group"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.6 }}
-                            >
-                                View My Work
-                                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </motion.a>
-                        </div>
                     </div>
+
+                    {/* INTRO TEXT */}
+                    <div className="relative z-10 max-w-4xl text-left mt-8 md:mt-0">
+                    <motion.h1
+                        className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-snug sm:leading-tight relative"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                    >
+                        <span className="relative inline-block z-10">
+                        Hi, I&apos;m Amman Chuhan
+                        <span
+                            className="animated-blob pointer-events-none absolute -inset-6 md:-inset-10 -z-10"
+                            aria-hidden="true"
+                        />
+                        </span>
+                        <br />
+                        <span className="typewriter font-ebgaramond text-violet-400 text-base sm:text-2xl md:text-4xl">
+                        Analyst, Technologist, &amp; Problem Solver
+                        </span>
+                    </motion.h1>
+
+                    <motion.p
+                        className="text-stone-300 text-base sm:text-lg mb-10 max-w-2xl"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                    >
+                        I bridge the gap between data-driven insights and technical product solutions. With a foundation in computer science and a focus on analytical strategy, I thrive on optimizing processes and building tools that create business value.
+                    </motion.p>
+
+                    <motion.a
+                        href="#projects"
+                        className="inline-flex items-center gap-2 bg-violet-500 text-white font-semibold py-3 px-8 rounded-full hover:bg-violet-600 transition-all group"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.6 }}
+                    >
+                        View My Work
+                        <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </motion.a>
+                    </div>
+                </div>
                 </motion.section>
 
                 <div className="container mx-auto px-6">
