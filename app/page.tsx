@@ -46,7 +46,7 @@ export default function PortfolioPage() {
     return (
         <div>
             <Header />
-            <main className="bg-black-950">
+            <main className="bg-gray-950">
                 <motion.section 
                     id="hero" 
                     className="relative min-h-screen flex items-center overflow-hidden"
@@ -89,7 +89,7 @@ export default function PortfolioPage() {
                                 </span>
                             </motion.h1>
                             <motion.p 
-                                className="text-lg text-stone-300 mb-10 max-w-2xl"
+                                className="text-m sm: text-lg md: text-lg text-stone-300 mb-10 max-w-2xl"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.4 }}

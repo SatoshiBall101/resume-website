@@ -20,6 +20,7 @@ const ebGaramond = EB_Garamond({
 export const metadata: Metadata = {
   title: "Amman Chuhan",
   description: "Personal resume website for Amman Chuhan",
+  themeColor: "#0a0a0a",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
