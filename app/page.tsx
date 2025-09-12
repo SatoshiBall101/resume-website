@@ -49,7 +49,7 @@ export default function PortfolioPage() {
             <main className="bg-gray-950">
             <motion.section
                 id="hero"
-                className="relative min-h-screen flex items-center bg-gray-950 overflow-hidden"
+                className="relative min-h-screen flex items-center bg-black overflow-hidden"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
