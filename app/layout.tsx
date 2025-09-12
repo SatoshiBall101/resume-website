@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${ebGaramond.variable} !scroll-smooth bg-gray-950`}>
-      <body className="font-sans text-stone-200 antialiased" suppressHydrationWarning>
+      <body className="bg-gray-950 font-sans text-stone-200 antialiased" suppressHydrationWarning>
         {children}
       </body>
     </html>
