@@ -21,7 +21,7 @@ export default function ContactPage() {
   };
   
   return (
-    <main className="flex items-center justify-center min-h-screen pt-24 pb-10">
+    <main className="flex items-center bg-gray-950 justify-center min-h-screen pt-24 pb-10">
       <div className="container mx-auto px-6">
         <motion.div 
           className="max-w-2xl mx-auto text-center"
