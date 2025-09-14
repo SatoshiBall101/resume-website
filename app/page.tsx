@@ -257,7 +257,7 @@ export default function PortfolioPage() {
                                 <h4 className="text-l font text-gray-400 mb-2">iPadOS Productivity App</h4>
                                 <p className="text-stone-300 mb-4 flex-grow">Designed and built a native iPad calendar application with deep PencilKit integration. Unlike other offerings, this app offered a pencil centric apporach to recording tasks in a calendar app. I used a MVVM architecture with component-based architecture.</p>
                             </motion.div>
-                            <Link href="/games" className="group">
+                            <Link href="/games" prefetch={false} className="group">
                                 <motion.div
                                     className="flex flex-col bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-violet-500 transition-all"
                                     initial={{ opacity: 0, y: 20 }}
