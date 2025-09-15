@@ -182,7 +182,11 @@ export default function PortfolioPage() {
                                 <Image src="/shookresearch.jpeg"  alt="SHOOK Research Logo" width={48} height={48} className="w-12 h-12 rounded-full flex-shrink-0" />
                                 <div>
                                     <h3 className="text-xl font-semibold text-white">Research & Data Analyst</h3>
-                                    <p className="text-violet-400 mb-1">SHOOK Research</p>
+                                    <p className="mb-1">
+                                        <span className="font-semibold text-violet-400">SHOOK Research</span>
+                                        <span className="mx-2 text-stone-500">|</span>
+                                        <span className="italic font-light text-stone-400">Boca Raton, FL</span>
+                                    </p>
                                     <p className="text-stone-400 text-sm mb-2">Starting Jan 2026</p>
                                     <p className="text-stone-300">Will be analyzing quantitative and qualitative data to identify top financial advisors, carrying out due dilligence interviews, and optimizing internal data processing workflows to enhance efficiency.</p>
                                 </div>
@@ -190,8 +194,9 @@ export default function PortfolioPage() {
                              <div className="flex items-start gap-6">
                              <Image src="/trojanvision.png" alt="Trojan Vision Logo" width={48} height={48} className="w-12 h-12 object-contain rounded-full flex-shrink-0" />                                <div>
                                     <h3 className="text-xl font-semibold text-white">Head Project Manager</h3>
-                                    <p className="text-violet-400 mb-1">Trojan Vision Television</p>
-                                    <p className="text-stone-400 text-sm mb-2">Aug 2022 - May 2025</p>
+                                    <span className="font-semibold text-violet-400">Trojan Vision</span>
+                                        <span className="mx-2 text-stone-500">|</span>
+                                        <span className="italic font-light text-stone-400">Los Angeles, CA</span>                                    <p className="text-stone-400 text-sm mb-2">Aug 2022 - May 2025</p>
                                     <p className="text-stone-300">Led and coordinated a student production team for Trojan Vision&apos;s gameshow section, managing executive producers, story teams, and technical crews to ensure smooth live productions.</p>
                                 </div>
                             </div>
@@ -199,8 +204,9 @@ export default function PortfolioPage() {
                                 <Image src="/coinpresso.png" alt="Coinpresso Logo" width={48} height={48} className="w-12 h-12 rounded-full flex-shrink-0" />
                                 <div>
                                     <h3 className="text-xl font-semibold text-white">Software Engineer Intern</h3>
-                                    <p className="text-violet-400 mb-1">Coinpresso</p>
-                                    <p className="text-stone-400 text-sm mb-2">May 2023 - Aug 2023</p>
+                                    <span className="font-semibold text-violet-400">Coinpresso</span>
+                                        <span className="mx-2 text-stone-500">|</span>
+                                        <span className="italic font-light text-stone-400">Auckland, NZ (Remote)</span>                                    <p className="text-stone-400 text-sm mb-2">May 2023 - Aug 2023</p>
                                     <p className="text-stone-300">Developed backend logic using Java with Springboot and Microservices Architechture. Used React, HTML and CSS for front-end development. Engineered a serverless AWS pipeline for a client&apos;s KYC portal using S3, Lambda, and Rekognition to automate facial analysis and validation, enhancing data processing efficiency.</p>
                                 </div>
                             </div>
@@ -208,7 +214,9 @@ export default function PortfolioPage() {
                                 <Image src="/marketcast.jpeg" alt="MarketCast Logo" width={48} height={48} className="w-12 h-12 rounded-full flex-shrink-0" />
                                 <div>
                                     <h3 className="text-xl font-semibold text-white">Content Insights Data Intern</h3>
-                                    <p className="text-violet-400 mb-1">MarketCast</p>
+                                    <span className="font-semibold text-violet-400">MarketCast</span>
+                                        <span className="mx-2 text-stone-500">|</span>
+                                        <span className="italic font-light text-stone-400">Los Angeles, CA</span>   
                                     <p className="text-stone-400 text-sm mb-2">June 2022 - Aug 2022</p>
                                     <p className="text-stone-300">Analyzed qualitative and quantitative datasets for major entertainment clients, translating raw numbers into compelling data stories and visualizations to provide actionable insights.</p>
                                 </div>
@@ -217,7 +225,9 @@ export default function PortfolioPage() {
                                 <Image src="/usclogo.png" alt="USC Logo" width={48} height={48} className="w-12 h-12 rounded-full flex-shrink-0" />
                                 <div>
                                     <h3 className="text-xl font-semibold text-white">Computer Science (B.S.)</h3>
-                                    <p className="text-violet-400 mb-1">University of Southern California</p>
+                                    <span className="font-semibold text-violet-400">University of Southern California</span>
+                                        <span className="mx-2 text-stone-500">|</span>
+                                        <span className="italic font-light text-stone-400">Los Angeles, CA</span>   
                                     <p className="text-stone-400 text-sm mb-2">2021 - 2025</p>
                                     <p className="text-stone-300">Relevant Coursework: Data Structures, Algorithms, Software Engineering, Database Systems, Internetworking, Artificial Intelligence, Linear Algebra.</p>
                                 </div>
