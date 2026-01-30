@@ -181,14 +181,14 @@ export default function PortfolioPage() {
                             <div className="flex items-start gap-6">
                                 <Image src="/shookresearch.jpeg"  alt="SHOOK Research Logo" width={48} height={48} className="w-12 h-12 rounded-full flex-shrink-0" />
                                 <div>
-                                    <h3 className="text-xl font-semibold text-white">Research & Data Analyst</h3>
+                                    <h3 className="text-xl font-semibold text-white">Data Analyst</h3>
                                     <p className="mb-1">
                                         <span className="font-semibold text-violet-400">SHOOK Research</span>
                                         <span className="mx-2 text-stone-500">|</span>
                                         <span className="italic font-light text-stone-400">Boca Raton, FL</span>
                                     </p>
-                                    <p className="text-stone-400 text-sm mb-2">Starting Jan 2026</p>
-                                    <p className="text-stone-300">Will be analyzing quantitative and qualitative data to identify top financial advisors, carrying out due dilligence interviews, and optimizing internal data processing workflows to enhance efficiency.</p>
+                                    <p className="text-stone-400 text-sm mb-2">Oct 2025</p>
+                                    <p className="text-stone-300">I analyze quantitative and qualitative data to identify top financial advisors, carrying out due dilligence interviews, and optimizing internal data processing workflows to enhance efficiency.</p>
                                 </div>
                             </div>
                              <div className="flex items-start gap-6">
