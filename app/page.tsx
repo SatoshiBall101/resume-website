@@ -181,7 +181,7 @@ export default function PortfolioPage() {
                             <div className="flex items-start gap-6">
                                 <Image src="/shookresearch.jpeg"  alt="SHOOK Research Logo" width={48} height={48} className="w-12 h-12 rounded-full flex-shrink-0" />
                                 <div>
-                                    <h3 className="text-xl font-semibold text-white">Data Analyst</h3>
+                                    <h3 className="text-xl font-semibold text-white">Data Engineer</h3>
                                     <p className="mb-1">
                                         <span className="font-semibold text-violet-400">SHOOK Research</span>
                                         <span className="mx-2 text-stone-500">|</span>
